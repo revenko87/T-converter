@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="T_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="summer" translatesAutoresizingMaskIntoConstraints="NO" id="Rm9-cD-aUc">
+                                <rect key="frame" x="-11" y="0.0" width="425" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="T-Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKK-8a-kSH">
+                                <rect key="frame" x="117" y="96" width="181" height="67"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZE-Ub-pm2">
+                                <rect key="frame" x="144" y="352" width="126" height="49"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="32ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUP-69-sgV">
+                                <rect key="frame" x="144" y="496" width="126" height="49"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g9F-gb-Mxb">
+                                <rect key="frame" x="18" y="433" width="378" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="gEP-TZ-ERE"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="gEP-TZ-ERE"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PZ0-Bp-SyU"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="Rm9-cD-aUc" secondAttribute="leading" constant="11" id="0IC-3l-pda"/>
+                            <constraint firstItem="UKK-8a-kSH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="6KG-1D-RmL"/>
+                            <constraint firstItem="g9F-gb-Mxb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CZD-lI-rvV"/>
+                            <constraint firstItem="NZE-Ub-pm2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GhU-Nz-Ptv"/>
+                            <constraint firstItem="g9F-gb-Mxb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HcE-0n-uv6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rm9-cD-aUc" secondAttribute="trailing" id="Mhm-0H-QCa"/>
+                            <constraint firstItem="GUP-69-sgV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Prc-qP-ReG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Rm9-cD-aUc" secondAttribute="top" constant="44" id="QV5-iK-h8X"/>
+                            <constraint firstItem="g9F-gb-Mxb" firstAttribute="top" secondItem="NZE-Ub-pm2" secondAttribute="bottom" constant="20" id="WLr-vI-mF3"/>
+                            <constraint firstItem="GUP-69-sgV" firstAttribute="top" secondItem="g9F-gb-Mxb" secondAttribute="bottom" constant="20" id="YOO-o5-5Mx"/>
+                            <constraint firstItem="Rm9-cD-aUc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="hx3-4z-XON"/>
+                            <constraint firstItem="UKK-8a-kSH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jmF-la-jsJ"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="Rm9-cD-aUc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0IC-3l-pda"/>
+                                <include reference="Mhm-0H-QCa"/>
+                                <include reference="QV5-iK-h8X"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="NZE-Ub-pm2" id="Gla-FP-9Z1"/>
+                        <outlet property="fahrenheitLabel" destination="GUP-69-sgV" id="ojP-wM-W4J"/>
+                        <outlet property="slider" destination="g9F-gb-Mxb" id="6Ve-Bj-17v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="65.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="summer" width="1080" height="2160"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
